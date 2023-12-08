@@ -24,14 +24,14 @@ let nextButton;
 let guesses = 5;
 let score = 0;
 let bestScore = 0;
-let category = "food";
+let category = "pokemons";
 let queryParam = category;
 let diffValues = {
 	easy: 0.4,
 	medium: 0.7,
 	hard: 1.3,
 };
-let difficulty = "medium";
+let difficulty = "easy";
 
 const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
 const updateCurrent = () => {
@@ -43,7 +43,7 @@ const getRandomWord = () => {
 		words.splice(current, 1);
 		return currentWord;
 	} else {
-		// Handle empty words
+		
 	}
 };
 const reduceGuesses = () => {
@@ -358,7 +358,6 @@ const clearPrevWord = (all) => {
 		button.style.border = "none";
 	});
 	if (all && wordContainer.firstChild) {
-		// For mobile...
 		while (wordContainer.firstChild) {
 			wordContainer.removeChild(wordContainer.lastChild);
 		}
